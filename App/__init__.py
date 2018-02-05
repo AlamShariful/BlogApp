@@ -15,6 +15,17 @@ app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # init MYSQL
 mysql = MySQL(app)
 
+# Check if user logged in
+def is_logged_in(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if 'logged_in' in session:
+            return f(*args, **kwargs)
+        else:
+            flash('Unauthorized, Please login', 'danger')
+            return redirect(url_for('home'))
+    return wrap
+
 
 
 
@@ -30,6 +41,153 @@ from app.mod_auth.controllers import mod_auth as auth_module
 app.register_blueprint(auth_module)
 # app.register_blueprint(xyz_module)
 
+@app.route('/dashboard/')
+@is_logged_in
+def dashboard():
+    pageName="Dashboard"
+    if session['username']=='admin':
+        cur = mysql.connection.cursor()
+        allposts = cur.execute("SELECT * from posts")
+        articles = cur.fetchall()
+        #cur.close()
+
+        if allposts > 0:
+            return render_template('dashboard.html', pageName=pageName, articles=articles)
+        else:
+            msg = "No Post Found"
+            return render_template('dashboard.html', pageName=pageName, msg=msg)
+    else:
+        cur = mysql.connection.cursor()
+        allposts = cur.execute("SELECT * from posts WHERE user_id=%s",[session['userid']])
+        articles = cur.fetchall()
+        #cur.close()
+
+        if allposts > 0:
+            return render_template('dashboard.html', pageName=pageName, articles=articles)
+        else:
+            msg = "No Post Found"
+            return render_template('dashboard.html', pageName=pageName, msg=msg)
+
+
+@app.route('/dashboard/edit/<string:id>/',methods=['GET', 'POST'])
+@is_logged_in
+def edit(id):
+    pageName="Edit Post"
+    if request.method=="POST":
+        title = request.form['title']
+        postbody = request.form['postbody']
+
+        # remove the <P> and </P> tag
+        postbody = postbody.replace('<p>', '').replace('</p>', '')
+
+        cur = mysql.connection.cursor()
+
+        # Execute
+        cur.execute("UPDATE posts SET title=%s, body=%s, approved=%s WHERE id=%s ",(title, postbody,'waiting',id))
+
+
+        # Commit to DB
+        mysql.connection.commit()
+        # Close connection
+        cur.close()
+
+        flash('Post Submit for approval', 'success')
+        return redirect(url_for('dashboard'))
+
+    cur = mysql.connection.cursor()
+    editposts = cur.execute("SELECT * from posts WHERE id=%s", [id])
+    data = cur.fetchone()
+    #bodydata=data['body']
+    # cur.close()
+
+    if editposts > 0:
+        return render_template('editpost.html', pageName=pageName, data=data)
+    else:
+        msg = "No Post Found"
+        return render_template('dashboard.html', pageName=pageName, msg=msg)
+
+
+@app.route('/dashboard/delete/<string:id>/')
+@is_logged_in
+def delete(id):
+    cur = mysql.connection.cursor()
+    # Get article
+    result = cur.execute("DELETE FROM posts WHERE id = %s", [id])
+    mysql.connection.commit()
+    cur.close()
+    if result > 0:
+        flash("Post has been Deleted", 'success')
+        return redirect(url_for('dashboard'))
+    else:
+        error = "Some This went Wrong, Please try again Later"
+        return redirect(url_for('dashboard', error=error))
+
+
+@app.route('/dashboard/postdisapprove/<string:id>/')
+@is_logged_in
+def postdisapprove(id):
+    cur = mysql.connection.cursor()
+    # Get article
+    result = cur.execute("UPDATE posts SET approved=%s WHERE id = %s", ('waiting', id))
+    mysql.connection.commit()
+    cur.close()
+    if result > 0:
+        flash("Post has been Disapproved", 'success')
+        return redirect(url_for('dashboard'))
+    else:
+        error = "Some This went Wrong, Please try again Later"
+        return redirect(url_for('dashboard', error=error))
+
+
+
+@app.route('/dashboard/postapprove/<string:id>/')
+@is_logged_in
+def postapprove(id):
+    cur = mysql.connection.cursor()
+    # Get article
+    result = cur.execute("UPDATE posts SET approved=%s WHERE id = %s",('yes',id))
+    mysql.connection.commit()
+    cur.close()
+    if result>0:
+        flash("Post Approved",'success')
+        return redirect(url_for('dashboard'))
+    else:
+        error="Some This went Wrong, Please try again Later"
+        return redirect(url_for('dashboard',error=error))
+
+@app.route('/dashboard/newpost/saveas/',methods=['GET', 'POST'])
+@is_logged_in
+def saveas():
+    return "save as"
+
+@app.route("/dashboard/newpost/",methods=['GET', 'POST'])
+@is_logged_in
+def newpost():
+    if request.method=="POST":
+        title= request.form['title']
+        postbody=request.form['postbody']
+
+        #remove the <P> and </P> tag
+        postbody = postbody.replace('<p>', '').replace('</p>', '')
+
+        cur= mysql.connection.cursor()
+
+        # Execute
+        cur.execute("INSERT INTO posts(user_id,title, body, author,approved) VALUES(%s, %s, %s, %s, %s)", (session['userid'],title, postbody, session['name'], 'waiting'))
+
+        # Commit to DB
+        mysql.connection.commit()
+        # Close connection
+        cur.close()
+
+        flash('Post Submit for approval', 'success')
+
+        return redirect(url_for('dashboard'))
+
+
+
+
+    return render_template('newpost.html')
 
 @app.route("/about/")
 def about():
@@ -56,20 +214,24 @@ def login():
         if userexists > 0:
             data = cur.fetchone()
             password = data['password']
+            name=data['name']
+            userid=data['id']
             #Match Password
             if sha256_crypt.verify(passwordfromuser, password):
                 session['logged_in'] = True
                 session['username'] = username
+                session['name']= name
+                session['userid']=userid
                 flash("Login Successful","success")
                 return redirect(url_for('home'))
             else:
                 error = "User Name and Passwoed dosen't Match"
-                render_template('login.html', error=error)
+                return render_template('login.html', error=error)
             cur.close()
 
         else:
             error ="User Name Not Found"
-            render_template("login.html", error=error)
+            return render_template("login.html", error=error)
 
     return render_template('login.html', pageName=pageName)
     #return "From template"
@@ -112,22 +274,8 @@ def registration():
 
         flash('User Registration Succefull','success')
         #session['username'] = username
-        return redirect(url_for('home'))
+        return redirect(url_for('login'))
     return render_template('registration.html', form=form, pageName=pageName)
-
-# Check if user logged in
-def is_logged_in(f):
-    @wraps(f)
-    def wrap(*args, **kwargs):
-        if 'logged_in' in session:
-            return f(*args, **kwargs)
-        else:
-            flash('Unauthorized, Please login', 'danger')
-            return redirect(url_for('home'))
-    return wrap
-
-
-
 
 @app.route("/logout/")
 @is_logged_in

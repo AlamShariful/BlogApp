@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="container" style="max-height: 100%">
+        <div class="row" style="font-size: x-large">
+            <header class="center"><strong>Edit Post</strong></header>
+        </div>
+        <div class="row">
+            <form class="form-horizontal" action="" method="post">
+                <!-- For Post Title-->
+                <div class="form-group">
+                    <label for="title" class="col-sm-2 control-label">Title</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="title" placeholder="Post Title" required name="title" value="{{ data['title'] }}">
+                    </div>
+                </div>
+                <!-- For User Name-->
+                <div class="form-group">
+                    <label for="author" class="col-sm-2 control-label">Author</label>
+                    <div class="col-sm-10">
+                      <label class="form-control" id="author">{{ session.name }}</label>
+
+                    </div>
+                </div>
+                <!-- For Post Body-->
+                <div class="form-group">
+                    <label for="editor" class="col-sm-2 control-label">Write Your Post</label>
+                    <div class="col-sm-10">
+                      <textarea  style="height: 50%; background-color: #B5B5B5" id="editor" class="form-control" placeholder="Write Your Post Here" required name="postbody"> {{ data['body'] }}</textarea>
+                    </div>
+                </div>
+                <!-- For Button-->
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-warning"><a href="{{ url_for('saveas') }}">Save as Draft</a></button>
+                        <button type="submit" class="btn btn-success">Submit For Approval</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+{% endblock %}

@@ -10,7 +10,8 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             {% if session['logged_in'] %}
-                <li><a href="#"><span class="glyphicon glyphicon-dashboard"></span>{{ session.username }}</a></li>
+                <li><a class="btn btn-success" style="color: white" href="{{ url_for('dashboard') }}" role="button">Dashboard</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>{{ session.username }}</a></li>
                 <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             {% else %}
                 <li><a href="{{ url_for('registration') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -21,3 +22,5 @@
         </ul>
     </div>
 </nav>
+
+<!--button class="btn btn-success" type="button" href="{{ url_for('dashboard') }}">Dashboard</button-->

@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+        <ul style="list-style-type: none">
+            <li style="font-size: x-large; font-family: Calibri;color: #2c3e50"><header>Create New Post From Here</header></li>
+            <li><a class="btn btn-primary glyphicon glyphicon-pencil" style="color: white" href="{{ url_for('newpost') }}" role="button">Create New Post</a></li>
+        </ul>
+    </div>
+        <div class="row">
+        <table class="table">
+          <thead>
+            <tr>
+            {% if session['username']=='admin' %}
+              <th>#</th>
+            {% endif %}
+              <th>Title</th>
+              <th>Post</th>
+              <th>Author</th>
+              <th>Approved Status</th>
+              <th>Posting Time</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for article in articles  %}
+            <tr>
+            {% if session['username']=='admin' %}
+                <th scope="row">{{ article.id }}</th>
+            {% endif %}
+              <td>{{ article.title }}</td>
+              <td>
+                  <div id="collapse" style="display:none">
+                  {{ article.body }}
+                  </div>
+                  <a href="#collapse" class="nav-toggle">Read More</a>
+              </td>
+              <td>{{ article.author }}</td>
+              <td>
+                  <ul style="list-style: none;">
+                      <li>{{ article.approved }}<!--/li-->
+                      {% if article.approved == 'waiting' and session['username']=='admin' %}
+                        <a class="btn btn-success" type="button" href="postapprove/{{ article.id }}">Approve</a></li>
+                      {% elif article.approved == 'yes' and session['username']=='admin' %}
+                        <a class="btn btn-warning" type="button" href="postdisapprove/{{ article.id }}">Disapprove</a></li>
+                      {% endif %}
+                  </ul>
+
+              </td>
+                <td>{{ article.time }}</td>
+
+              <td>
+                  <ul  style="list-style: none;">
+                      <li><a class="btn btn-warning" type="button" href="edit/{{ article.id }}">Edit</a><!--/li-->
+                      <!--li--><a class="btn btn-danger" type="button" href="delete/{{ article.id }}">Delete</a></li>
+                  </ul>
+              </td>
+
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+
+    </div>
+    </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+    $('.nav-toggle').click(function () {
+        var collapse_content_selector = $(this).attr('href');
+        var toggle_switch = $(this);
+        $(collapse_content_selector).toggle(function () {
+            if ($(this).css('display') == 'none') {
+                toggle_switch.html('Read More');
+            } else {
+                toggle_switch.html('Read Less');
+            }
+        });
+    });
+
+    });
+</script>
+{% endblock %}
