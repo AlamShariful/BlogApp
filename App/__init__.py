@@ -273,18 +273,29 @@ def registration():
         #Create MySql Connection
         cur= mysql.connection.cursor()
 
-        #Insert Query
-        cur.execute("INSERT INTO users(name, email, username,password) VALUES(%s,%s,%s,%s)", (name, email, username, password))
+        # check for unique username and email
+        getusername=cur.execute("SELECT * FROM users WHERE username=%s", [username])
+        getemail = cur.execute("SELECT * FROM users WHERE email=%s", [email])
+        #userdata=cur.fetchall()
 
-        #COmmit to DB
-        mysql.connection.commit()
+        if getusername > 0:
+           error="This User name is already Taken, Please try another one"
+           return render_template('registration.html',form=form,error=error,pageName=pageName)
+        elif getemail > 0:
+            error = "This Email is already registered, Please try another one"
+            return render_template('registration.html', form=form, error=error, pageName=pageName)
+        else:
+            #Insert Query
+            cur.execute("INSERT INTO users(name, email, username,password) VALUES(%s,%s,%s,%s)", (name, email, username, password))
+            #COmmit to DB
+            mysql.connection.commit()
+            #Close Connection
+            cur.close()
 
-        #Close Connection
-        cur.close()
+            flash('User Registration Succefull','success')
+            #session['username'] = username
+            return redirect(url_for('login'))
 
-        flash('User Registration Succefull','success')
-        #session['username'] = username
-        return redirect(url_for('login'))
     return render_template('registration.html', form=form, pageName=pageName)
 
 @app.route("/logout/")
