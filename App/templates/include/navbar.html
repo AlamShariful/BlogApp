@@ -9,6 +9,14 @@
             <li><a href="{{ url_for('about') }}">About</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <form class="navbar-form navbar-left" role="search">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search for post title">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </li>
             {% if session['logged_in'] %}
                 <li><a class="btn btn-success" style="color: white" href="{{ url_for('dashboard') }}" role="button">Dashboard</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span>{{ session.username }}</a></li>

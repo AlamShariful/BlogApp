@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0813611-6639-4351-aed4-65c6a3cc6296" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/BlogApp.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/static/newpost.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/static/showless.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/templates/dashboard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/templates/editpost.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/templates/newpost.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BlogApp/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/App/static/showless.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/__init__.py" afterPath="$PROJECT_DIR$/App/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/templates/dashboard.html" afterPath="$PROJECT_DIR$/App/templates/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/templates/home.html" afterPath="$PROJECT_DIR$/App/templates/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/templates/include/navbar.html" afterPath="$PROJECT_DIR$/App/templates/include/navbar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/templates/layout.html" afterPath="$PROJECT_DIR$/App/templates/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blogapp.wsgi" afterPath="$PROJECT_DIR$/blogapp.wsgi" />
     </list>
     <ignored path="BlogApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,68 +36,85 @@
       <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+            <state relative-caret-position="725">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="661">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+            <state relative-caret-position="575">
+              <caret line="276" column="127" selection-start-line="276" selection-start-column="127" selection-end-line="276" selection-end-column="127" />
               <folding>
                 <element signature="e#0#93#0" expanded="true" />
-                <element signature="e#1189#2083#0" expanded="false" />
-                <element signature="e#2185#3200#0" expanded="false" />
-                <element signature="e#3282#3690#0" expanded="false" />
-                <element signature="e#3788#4222#0" expanded="false" />
-                <element signature="e#4824#4840#0" expanded="false" />
-                <element signature="e#5667#5742#0" expanded="false" />
-                <element signature="e#5781#5857#0" expanded="false" />
-                <element signature="e#7186#7597#0" expanded="false" />
-                <element signature="e#7706#8551#0" expanded="false" />
-                <element signature="e#8608#8747#0" expanded="false" />
-                <element signature="e#8782#8817#0" expanded="false" />
-                <marker date="1517820322718" expanded="true" signature="1319:1338" placeholder="SELECT * fro... posts" />
-                <marker date="1517820322718" expanded="true" signature="1724:1743" placeholder="SELECT * fro... posts" />
-                <marker date="1517820322718" expanded="true" signature="1724:1760" placeholder="SELECT * fro... posts" />
-                <marker date="1517820322718" expanded="true" signature="2506:2565" placeholder="UPDATE posts... " />
-                <marker date="1517820322718" expanded="true" signature="2506:2566" placeholder="UPDATE posts... " />
-                <marker date="1517820322718" expanded="true" signature="2872:2903" placeholder="SELECT * fro... posts" />
-                <marker date="1517820322718" expanded="true" signature="3358:3389" placeholder="DELETE FROM " />
-                <marker date="1517820322718" expanded="true" signature="3864:3906" placeholder="UPDATE posts... " />
-                <marker date="1517820322718" expanded="true" signature="4391:4433" placeholder="UPDATE posts... " />
-                <marker date="1517820322718" expanded="true" signature="4419:4433" placeholder="SELECT * FRO... posts" />
-                <marker date="1517820322718" expanded="true" signature="5224:5306" placeholder="INSERT INTO posts... " />
-                <marker date="1517820322718" expanded="true" signature="6147:6184" placeholder="SELECT * fro... users" />
-                <marker date="1517820322718" expanded="true" signature="8125:8137" placeholder="INSERT INTO USERS... " />
-                <marker date="1517820322718" expanded="true" signature="8125:8174" placeholder="INSERT INTO users... " />
-                <marker date="1517820322718" expanded="true" signature="8125:8194" placeholder="INSERT INTO users... " />
+                <element signature="e#587#833#0" expanded="false" />
+                <element signature="e#891#1341#0" expanded="false" />
+                <element signature="e#1564#2458#0" expanded="false" />
+                <element signature="e#2560#3575#0" expanded="false" />
+                <element signature="e#3657#4065#0" expanded="false" />
+                <element signature="e#4163#4597#0" expanded="false" />
+                <element signature="e#4690#5100#0" expanded="false" />
+                <element signature="e#5199#5215#0" expanded="false" />
+                <element signature="e#5308#6001#0" expanded="false" />
+                <element signature="e#6042#6117#0" expanded="false" />
+                <element signature="e#6296#7475#0" expanded="false" />
+                <element signature="e#7560#7971#0" expanded="false" />
+                <element signature="e#8982#9121#0" expanded="false" />
+                <element signature="e#9156#9191#0" expanded="false" />
+                <marker date="1517884581073" expanded="true" signature="973:992" placeholder="SELECT * fro... posts" />
+                <marker date="1517884581073" expanded="true" signature="973:998" placeholder="SELECT * fro... posts" />
+                <marker date="1517884581073" expanded="true" signature="973:1009" placeholder="SELECT * fro... posts" />
+                <marker date="1517884581073" expanded="true" signature="973:1010" placeholder="SELECT * fro... posts" />
+                <marker date="1517884581073" expanded="true" signature="1694:1713" placeholder="SELECT * fro... posts" />
+                <marker date="1517884581073" expanded="true" signature="2099:2118" placeholder="SELECT * fro... posts" />
+                <marker date="1517884581073" expanded="true" signature="2099:2135" placeholder="SELECT * fro... posts" />
+                <marker date="1517884581073" expanded="true" signature="2881:2940" placeholder="UPDATE posts... " />
+                <marker date="1517884581073" expanded="true" signature="2881:2941" placeholder="UPDATE posts... " />
+                <marker date="1517884581073" expanded="true" signature="3247:3278" placeholder="SELECT * fro... posts" />
+                <marker date="1517884581073" expanded="true" signature="3733:3764" placeholder="DELETE FROM " />
+                <marker date="1517884581073" expanded="true" signature="4239:4281" placeholder="UPDATE posts... " />
+                <marker date="1517884581073" expanded="true" signature="4766:4808" placeholder="UPDATE posts... " />
+                <marker date="1517884581073" expanded="true" signature="4794:4808" placeholder="SELECT * FRO... posts" />
+                <marker date="1517884581073" expanded="true" signature="5599:5681" placeholder="INSERT INTO posts... " />
+                <marker date="1517884581073" expanded="true" signature="6521:6558" placeholder="SELECT * fro... users" />
+                <marker date="1517884581073" expanded="true" signature="8499:8511" placeholder="INSERT INTO USERS... " />
+                <marker date="1517884581073" expanded="true" signature="8499:8548" placeholder="INSERT INTO users... " />
+                <marker date="1517884581073" expanded="true" signature="8499:8568" placeholder="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showless.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/static/showless.js">
+      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/templates/include/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2625">
-              <caret line="107" column="45" selection-start-line="107" selection-start-column="45" selection-end-line="107" selection-end-column="45" />
+            <state relative-caret-position="350">
+              <caret line="14" column="98" selection-start-line="14" selection-start-column="98" selection-end-line="14" selection-end-column="98" />
               <folding>
-                <element signature="e#0#40#0" expanded="false" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="575">
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -155,16 +162,18 @@
         <option value="$PROJECT_DIR$/App/static/login.css" />
         <option value="$PROJECT_DIR$/App/templates/signing.html" />
         <option value="$PROJECT_DIR$/App/templates/login.html" />
-        <option value="$PROJECT_DIR$/App/templates/include/navbar.html" />
         <option value="$PROJECT_DIR$/App/templates/nrepost.html" />
         <option value="$PROJECT_DIR$/App/static/newpost.css" />
         <option value="$PROJECT_DIR$/App/templates/newpost.html" />
         <option value="$PROJECT_DIR$/App/templates/editpost.html" />
-        <option value="$PROJECT_DIR$/App/__init__.py" />
+        <option value="$PROJECT_DIR$/App/static/showless.js" />
+        <option value="$PROJECT_DIR$/App/static/js/dashboardreadmore.js" />
+        <option value="$PROJECT_DIR$/App/templates/home.html" />
         <option value="$PROJECT_DIR$/App/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/App/templates/layout.html" />
-        <option value="$PROJECT_DIR$/App/static/showless.js" />
-        <option value="$PROJECT_DIR$/App/templates/home.html" />
+        <option value="$PROJECT_DIR$/App/static/js/postreadmore.js" />
+        <option value="$PROJECT_DIR$/App/templates/include/navbar.html" />
+        <option value="$PROJECT_DIR$/App/__init__.py" />
       </list>
     </option>
   </component>
@@ -310,7 +319,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mod_auth" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -574,9 +587,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -595,6 +608,26 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10770975" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -612,55 +645,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2150">
-          <caret line="90" column="16" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-            <element signature="e#1189#2083#0" expanded="false" />
-            <element signature="e#2185#3200#0" expanded="false" />
-            <element signature="e#3282#3690#0" expanded="false" />
-            <element signature="e#3788#4222#0" expanded="false" />
-            <element signature="e#4824#4840#0" expanded="false" />
-            <element signature="e#5667#5742#0" expanded="false" />
-            <element signature="e#5781#5857#0" expanded="false" />
-            <element signature="e#7186#7597#0" expanded="false" />
-            <element signature="e#7706#8551#0" expanded="false" />
-            <element signature="e#8608#8747#0" expanded="false" />
-            <element signature="e#8782#8817#0" expanded="false" />
-            <marker date="1517820322718" expanded="true" signature="1319:1338" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="1724:1743" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="1724:1760" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="2506:2565" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="2506:2566" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="2872:2903" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="3358:3389" placeholder="DELETE FROM " />
-            <marker date="1517820322718" expanded="true" signature="3864:3906" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="4391:4433" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="4419:4433" placeholder="SELECT * FRO... posts" />
-            <marker date="1517820322718" expanded="true" signature="5224:5306" placeholder="INSERT INTO posts... " />
-            <marker date="1517820322718" expanded="true" signature="6147:6184" placeholder="SELECT * fro... users" />
-            <marker date="1517820322718" expanded="true" signature="8125:8137" placeholder="INSERT INTO USERS... " />
-            <marker date="1517820322718" expanded="true" signature="8125:8174" placeholder="INSERT INTO users... " />
-            <marker date="1517820322718" expanded="true" signature="8125:8194" placeholder="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -669,7 +657,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -678,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,32 +705,39 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#93#0" expanded="true" />
-            <element signature="e#1189#2083#0" expanded="false" />
-            <element signature="e#2185#3200#0" expanded="false" />
-            <element signature="e#3282#3690#0" expanded="false" />
-            <element signature="e#3788#4222#0" expanded="false" />
-            <element signature="e#4824#4840#0" expanded="false" />
-            <element signature="e#5667#5742#0" expanded="false" />
-            <element signature="e#5781#5857#0" expanded="false" />
-            <element signature="e#7186#7597#0" expanded="false" />
-            <element signature="e#7706#8551#0" expanded="false" />
-            <element signature="e#8608#8747#0" expanded="false" />
-            <element signature="e#8782#8817#0" expanded="false" />
-            <marker date="1517820322718" expanded="true" signature="1319:1338" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="1724:1743" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="1724:1760" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="2506:2565" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="2506:2566" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="2872:2903" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="3358:3389" placeholder="DELETE FROM " />
-            <marker date="1517820322718" expanded="true" signature="3864:3906" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="4391:4433" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="4419:4433" placeholder="SELECT * FRO... posts" />
-            <marker date="1517820322718" expanded="true" signature="5224:5306" placeholder="INSERT INTO posts... " />
-            <marker date="1517820322718" expanded="true" signature="6147:6184" placeholder="SELECT * fro... users" />
-            <marker date="1517820322718" expanded="true" signature="8125:8137" placeholder="INSERT INTO USERS... " />
-            <marker date="1517820322718" expanded="true" signature="8125:8174" placeholder="INSERT INTO users... " />
-            <marker date="1517820322718" expanded="true" signature="8125:8194" placeholder="INSERT INTO users... " />
+            <element signature="e#587#833#0" expanded="false" />
+            <element signature="e#891#1341#0" expanded="false" />
+            <element signature="e#1564#2458#0" expanded="false" />
+            <element signature="e#2560#3575#0" expanded="false" />
+            <element signature="e#3657#4065#0" expanded="false" />
+            <element signature="e#4163#4597#0" expanded="false" />
+            <element signature="e#4690#5100#0" expanded="false" />
+            <element signature="e#5199#5215#0" expanded="false" />
+            <element signature="e#5308#6001#0" expanded="false" />
+            <element signature="e#6042#6117#0" expanded="false" />
+            <element signature="e#6296#7475#0" expanded="false" />
+            <element signature="e#7560#7971#0" expanded="false" />
+            <element signature="e#8982#9121#0" expanded="false" />
+            <element signature="e#9156#9191#0" expanded="false" />
+            <marker date="1517884581073" expanded="true" signature="973:992" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="973:998" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="973:1009" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="973:1010" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="1694:1713" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="2099:2118" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="2099:2135" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="2881:2940" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="2881:2941" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="3247:3278" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="3733:3764" placeholder="DELETE FROM " />
+            <marker date="1517884581073" expanded="true" signature="4239:4281" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="4766:4808" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="4794:4808" placeholder="SELECT * FRO... posts" />
+            <marker date="1517884581073" expanded="true" signature="5599:5681" placeholder="INSERT INTO posts... " />
+            <marker date="1517884581073" expanded="true" signature="6521:6558" placeholder="SELECT * fro... users" />
+            <marker date="1517884581073" expanded="true" signature="8499:8511" placeholder="INSERT INTO USERS... " />
+            <marker date="1517884581073" expanded="true" signature="8499:8548" placeholder="INSERT INTO users... " />
+            <marker date="1517884581073" expanded="true" signature="8499:8568" placeholder="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -769,7 +761,7 @@
         <state relative-caret-position="300">
           <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -802,7 +794,7 @@
         <state relative-caret-position="400">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -828,32 +820,39 @@
           <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
           <folding>
             <element signature="e#0#93#0" expanded="true" />
-            <element signature="e#1189#2083#0" expanded="false" />
-            <element signature="e#2185#3200#0" expanded="false" />
-            <element signature="e#3282#3690#0" expanded="false" />
-            <element signature="e#3788#4222#0" expanded="false" />
-            <element signature="e#4824#4840#0" expanded="false" />
-            <element signature="e#5667#5742#0" expanded="false" />
-            <element signature="e#5781#5857#0" expanded="false" />
-            <element signature="e#7186#7597#0" expanded="false" />
-            <element signature="e#7706#8551#0" expanded="false" />
-            <element signature="e#8608#8747#0" expanded="false" />
-            <element signature="e#8782#8817#0" expanded="false" />
-            <marker date="1517820322718" expanded="true" signature="1319:1338" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="1724:1743" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="1724:1760" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="2506:2565" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="2506:2566" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="2872:2903" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="3358:3389" placeholder="DELETE FROM " />
-            <marker date="1517820322718" expanded="true" signature="3864:3906" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="4391:4433" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="4419:4433" placeholder="SELECT * FRO... posts" />
-            <marker date="1517820322718" expanded="true" signature="5224:5306" placeholder="INSERT INTO posts... " />
-            <marker date="1517820322718" expanded="true" signature="6147:6184" placeholder="SELECT * fro... users" />
-            <marker date="1517820322718" expanded="true" signature="8125:8137" placeholder="INSERT INTO USERS... " />
-            <marker date="1517820322718" expanded="true" signature="8125:8174" placeholder="INSERT INTO users... " />
-            <marker date="1517820322718" expanded="true" signature="8125:8194" placeholder="INSERT INTO users... " />
+            <element signature="e#587#833#0" expanded="false" />
+            <element signature="e#891#1341#0" expanded="false" />
+            <element signature="e#1564#2458#0" expanded="false" />
+            <element signature="e#2560#3575#0" expanded="false" />
+            <element signature="e#3657#4065#0" expanded="false" />
+            <element signature="e#4163#4597#0" expanded="false" />
+            <element signature="e#4690#5100#0" expanded="false" />
+            <element signature="e#5199#5215#0" expanded="false" />
+            <element signature="e#5308#6001#0" expanded="false" />
+            <element signature="e#6042#6117#0" expanded="false" />
+            <element signature="e#6296#7475#0" expanded="false" />
+            <element signature="e#7560#7971#0" expanded="false" />
+            <element signature="e#8982#9121#0" expanded="false" />
+            <element signature="e#9156#9191#0" expanded="false" />
+            <marker date="1517884581073" expanded="true" signature="973:992" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="973:998" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="973:1009" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="973:1010" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="1694:1713" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="2099:2118" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="2099:2135" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="2881:2940" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="2881:2941" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="3247:3278" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="3733:3764" placeholder="DELETE FROM " />
+            <marker date="1517884581073" expanded="true" signature="4239:4281" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="4766:4808" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="4794:4808" placeholder="SELECT * FRO... posts" />
+            <marker date="1517884581073" expanded="true" signature="5599:5681" placeholder="INSERT INTO posts... " />
+            <marker date="1517884581073" expanded="true" signature="6521:6558" placeholder="SELECT * fro... users" />
+            <marker date="1517884581073" expanded="true" signature="8499:8511" placeholder="INSERT INTO USERS... " />
+            <marker date="1517884581073" expanded="true" signature="8499:8548" placeholder="INSERT INTO users... " />
+            <marker date="1517884581073" expanded="true" signature="8499:8568" placeholder="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -952,7 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="74" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,7 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,7 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,21 +983,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/templates/include/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,11 +994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding>
-            <element signature="e#72#96#0#HTML" expanded="true" />
-            <element signature="e#123#149#0#HTML" expanded="true" />
-            <element signature="e#1337#1383#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1022,70 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-514">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="e#111#140#0#HTML" expanded="true" />
-            <element signature="e#158#221#0#HTML" expanded="true" />
-            <element signature="e#340#360#0#HTML" expanded="true" />
-            <element signature="e#1179#1199#0#HTML" expanded="true" />
-            <element signature="e#1439#1464#0#HTML" expanded="true" />
-            <element signature="e#2119#2144#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-            <element signature="e#1189#2083#0" expanded="false" />
-            <element signature="e#2185#3200#0" expanded="false" />
-            <element signature="e#3282#3690#0" expanded="false" />
-            <element signature="e#3788#4222#0" expanded="false" />
-            <element signature="e#4824#4840#0" expanded="false" />
-            <element signature="e#5667#5742#0" expanded="false" />
-            <element signature="e#5781#5857#0" expanded="false" />
-            <element signature="e#7186#7597#0" expanded="false" />
-            <element signature="e#7706#8551#0" expanded="false" />
-            <element signature="e#8608#8747#0" expanded="false" />
-            <element signature="e#8782#8817#0" expanded="false" />
-            <marker date="1517820322718" expanded="true" signature="1319:1338" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="1724:1743" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="1724:1760" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="2506:2565" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="2506:2566" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="2872:2903" placeholder="SELECT * fro... posts" />
-            <marker date="1517820322718" expanded="true" signature="3358:3389" placeholder="DELETE FROM " />
-            <marker date="1517820322718" expanded="true" signature="3864:3906" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="4391:4433" placeholder="UPDATE posts... " />
-            <marker date="1517820322718" expanded="true" signature="4419:4433" placeholder="SELECT * FRO... posts" />
-            <marker date="1517820322718" expanded="true" signature="5224:5306" placeholder="INSERT INTO posts... " />
-            <marker date="1517820322718" expanded="true" signature="6147:6184" placeholder="SELECT * fro... users" />
-            <marker date="1517820322718" expanded="true" signature="8125:8137" placeholder="INSERT INTO USERS... " />
-            <marker date="1517820322718" expanded="true" signature="8125:8174" placeholder="INSERT INTO users... " />
-            <marker date="1517820322718" expanded="true" signature="8125:8194" placeholder="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1093,17 +1008,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2625">
           <caret line="107" column="45" selection-start-line="107" selection-start-column="45" selection-end-line="107" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/static/js/dashboardreadmore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
+            <marker date="1517882451671" expanded="true" signature="647:660" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        <state relative-caret-position="575">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/static/js/postreadmore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <marker date="1517886756424" expanded="true" signature="640:653" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/include/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="98" selection-start-line="14" selection-start-column="98" selection-end-line="14" selection-end-column="98" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="276" column="127" selection-start-line="276" selection-start-column="127" selection-end-line="276" selection-end-column="127" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+            <element signature="e#587#833#0" expanded="false" />
+            <element signature="e#891#1341#0" expanded="false" />
+            <element signature="e#1564#2458#0" expanded="false" />
+            <element signature="e#2560#3575#0" expanded="false" />
+            <element signature="e#3657#4065#0" expanded="false" />
+            <element signature="e#4163#4597#0" expanded="false" />
+            <element signature="e#4690#5100#0" expanded="false" />
+            <element signature="e#5199#5215#0" expanded="false" />
+            <element signature="e#5308#6001#0" expanded="false" />
+            <element signature="e#6042#6117#0" expanded="false" />
+            <element signature="e#6296#7475#0" expanded="false" />
+            <element signature="e#7560#7971#0" expanded="false" />
+            <element signature="e#8982#9121#0" expanded="false" />
+            <element signature="e#9156#9191#0" expanded="false" />
+            <marker date="1517884581073" expanded="true" signature="973:992" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="973:998" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="973:1009" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="973:1010" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="1694:1713" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="2099:2118" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="2099:2135" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="2881:2940" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="2881:2941" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="3247:3278" placeholder="SELECT * fro... posts" />
+            <marker date="1517884581073" expanded="true" signature="3733:3764" placeholder="DELETE FROM " />
+            <marker date="1517884581073" expanded="true" signature="4239:4281" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="4766:4808" placeholder="UPDATE posts... " />
+            <marker date="1517884581073" expanded="true" signature="4794:4808" placeholder="SELECT * FRO... posts" />
+            <marker date="1517884581073" expanded="true" signature="5599:5681" placeholder="INSERT INTO posts... " />
+            <marker date="1517884581073" expanded="true" signature="6521:6558" placeholder="SELECT * fro... users" />
+            <marker date="1517884581073" expanded="true" signature="8499:8511" placeholder="INSERT INTO USERS... " />
+            <marker date="1517884581073" expanded="true" signature="8499:8548" placeholder="INSERT INTO users... " />
+            <marker date="1517884581073" expanded="true" signature="8499:8568" placeholder="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>

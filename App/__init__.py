@@ -33,7 +33,17 @@ def is_logged_in(f):
 @app.route("/home/")
 def home():
     pageName = "Home"
-    return render_template('home.html',pageName=pageName)
+    cur = mysql.connection.cursor()
+    allposts = cur.execute("SELECT * from posts WHERE approved=%s",['yes'])
+    articles = cur.fetchall()
+    cur.close()
+
+    if allposts > 0:
+        return render_template('home.html', pageName=pageName, articles=articles)
+    else:
+        msg = "No Post Found"
+        return render_template('home.html', pageName=pageName, msg=msg)
+    #return render_template('home.html',pageName=pageName)
 
 from app.mod_auth.controllers import mod_auth as auth_module
 
@@ -197,7 +207,7 @@ def about():
 @app.route("/blog/")
 def blog():
     pageName = "Blog"
-    return  render_template('blog.html',pageName=pageName)
+    return render_template('blog.html',pageName=pageName)
 
 @app.route("/login/",methods=['GET', 'POST'])
 def login():

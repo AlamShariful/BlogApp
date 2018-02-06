@@ -30,10 +30,11 @@
             {% endif %}
               <td>{{ article.title }}</td>
               <td>
-                  <div id="collapse" style="display:none">
-                  {{ article.body }}
+                  <div class="dashboarditem">
+                      {#% autoescape off %#}
+                      {{ article.body }}
+                      {#% endautoescape %#}
                   </div>
-                  <a href="#collapse" class="nav-toggle">Read More</a>
               </td>
               <td>{{ article.author }}</td>
               <td>
@@ -64,20 +65,4 @@
     </div>
     </div>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-    $('.nav-toggle').click(function () {
-        var collapse_content_selector = $(this).attr('href');
-        var toggle_switch = $(this);
-        $(collapse_content_selector).toggle(function () {
-            if ($(this).css('display') == 'none') {
-                toggle_switch.html('Read More');
-            } else {
-                toggle_switch.html('Read Less');
-            }
-        });
-    });
-
-    });
-</script>
 {% endblock %}
