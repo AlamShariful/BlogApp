@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0813611-6639-4351-aed4-65c6a3cc6296" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/__init__.py" afterPath="$PROJECT_DIR$/App/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/templates/home.html" afterPath="$PROJECT_DIR$/App/templates/home.html" />
-    </list>
+    <list default="true" id="b0813611-6639-4351-aed4-65c6a3cc6296" name="Default" comment="" />
     <ignored path="BlogApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -51,8 +48,8 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="285" column="67" selection-start-line="285" selection-start-column="67" selection-end-line="285" selection-end-column="67" />
+            <state relative-caret-position="2075">
+              <caret line="262" column="19" selection-start-line="262" selection-start-column="19" selection-end-line="262" selection-end-column="19" />
               <folding>
                 <element signature="e#0#93#0" expanded="true" />
                 <element signature="e#587#833#0" expanded="false" />
@@ -65,7 +62,9 @@
                 <element signature="e#5199#5215#0" expanded="false" />
                 <element signature="e#5308#6001#0" expanded="false" />
                 <element signature="e#6042#6117#0" expanded="false" />
+                <element signature="e#6296#7475#0" expanded="false" />
                 <element signature="e#7560#7971#0" expanded="false" />
+                <element signature="e#8080#9620#0" expanded="false" />
                 <element signature="e#9677#9816#0" expanded="false" />
                 <element signature="e#9851#9886#0" expanded="false" />
                 <marker date="1517894295779" expanded="true" signature="973:992" placeholder="SELECT * fro... posts" />
@@ -712,7 +711,9 @@
             <element signature="e#5199#5215#0" expanded="false" />
             <element signature="e#5308#6001#0" expanded="false" />
             <element signature="e#6042#6117#0" expanded="false" />
+            <element signature="e#6296#7475#0" expanded="false" />
             <element signature="e#7560#7971#0" expanded="false" />
+            <element signature="e#8080#9620#0" expanded="false" />
             <element signature="e#9677#9816#0" expanded="false" />
             <element signature="e#9851#9886#0" expanded="false" />
             <marker date="1517894295779" expanded="true" signature="973:992" placeholder="SELECT * fro... posts" />
@@ -829,7 +830,9 @@
             <element signature="e#5199#5215#0" expanded="false" />
             <element signature="e#5308#6001#0" expanded="false" />
             <element signature="e#6042#6117#0" expanded="false" />
+            <element signature="e#6296#7475#0" expanded="false" />
             <element signature="e#7560#7971#0" expanded="false" />
+            <element signature="e#8080#9620#0" expanded="false" />
             <element signature="e#9677#9816#0" expanded="false" />
             <element signature="e#9851#9886#0" expanded="false" />
             <marker date="1517894295779" expanded="true" signature="973:992" placeholder="SELECT * fro... posts" />
@@ -1071,8 +1074,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="285" column="67" selection-start-line="285" selection-start-column="67" selection-end-line="285" selection-end-column="67" />
+        <state relative-caret-position="2075">
+          <caret line="262" column="19" selection-start-line="262" selection-start-column="19" selection-end-line="262" selection-end-column="19" />
           <folding>
             <element signature="e#0#93#0" expanded="true" />
             <element signature="e#587#833#0" expanded="false" />
@@ -1085,7 +1088,9 @@
             <element signature="e#5199#5215#0" expanded="false" />
             <element signature="e#5308#6001#0" expanded="false" />
             <element signature="e#6042#6117#0" expanded="false" />
+            <element signature="e#6296#7475#0" expanded="false" />
             <element signature="e#7560#7971#0" expanded="false" />
+            <element signature="e#8080#9620#0" expanded="false" />
             <element signature="e#9677#9816#0" expanded="false" />
             <element signature="e#9851#9886#0" expanded="false" />
             <marker date="1517894295779" expanded="true" signature="973:992" placeholder="SELECT * fro... posts" />
