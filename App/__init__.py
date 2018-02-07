@@ -83,16 +83,10 @@ def dashboard():
 @is_logged_in
 def edit(id):
     pageName="Edit Post"
-
-    # check if the user is the owner of this post
     cur = mysql.connection.cursor()
-    postuserid= cur.execute("SELECT posts.user_id from posts where id=%s",[id])
-    if session['userid']!= postuserid:
-        flash('You are Not authorised to edit this Post', 'danger')
-        return redirect(url_for('dashboard'))
 
-    # For regular user post edit
-    if request.method=="POST":
+    ##### After User Edit the Post then Submit For DataBase Update
+    if request.method == "POST":
         title = request.form['title']
         postbody = request.form['postbody']
 
@@ -103,8 +97,6 @@ def edit(id):
 
         # Execute
         cur.execute("UPDATE posts SET title=%s, body=%s, approved=%s WHERE id=%s ",(title, postbody,'waiting',id))
-
-
         # Commit to DB
         mysql.connection.commit()
         # Close connection
@@ -113,11 +105,14 @@ def edit(id):
         flash('Post Submit for approval', 'success')
         return redirect(url_for('dashboard'))
 
-    #cur = mysql.connection.cursor()
+    ### Load the Data into edit Form for View
+    ## First check if the user is the owner of this post
     editposts = cur.execute("SELECT * from posts WHERE id=%s", [id])
     data = cur.fetchone()
-    #bodydata=data['body']
-    # cur.close()
+    user_id= data['user_id']
+    if session['userid']!= user_id:
+        flash('You are Not authorised to Edit this Post', 'danger')
+        return redirect(url_for('dashboard'))
 
     if editposts > 0:
         return render_template('editpost.html', pageName=pageName, data=data)
@@ -130,11 +125,12 @@ def edit(id):
 @is_logged_in
 def delete(id):
     cur = mysql.connection.cursor()
-    # check if the user is the owner of this post
-    cur = mysql.connection.cursor()
-    postuserid = cur.execute("SELECT posts.user_id from posts where id=%s", [id])
-    if session['userid'] != postuserid:
-        flash('You are Not authorised to delete this Post', 'danger')
+    ## First check if the user is the owner of this post
+    cur.execute("SELECT * from posts WHERE id=%s", [id])
+    data = cur.fetchone()
+    user_id = data['user_id']
+    if session['userid'] != user_id:
+        flash('You are Not authorised to Delete this Post', 'danger')
         return redirect(url_for('dashboard'))
     # Get article
     result = cur.execute("DELETE FROM posts WHERE id = %s", [id])

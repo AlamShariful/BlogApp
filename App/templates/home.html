@@ -4,20 +4,24 @@
 
 
     <div class="container">
-    {% for article in articles %}
-        <div class="col-md-12">
+        <div class="row">
+
+            {% for article in articles %}
+            <!--div class="col-md-2"></div-->
+
+            <div class="col-md-8">
             <h1>{{ article.title }}</h1>
             <div>
                 <span class="badge">{{ article.time }}</span>
                 <span class="badge">{{ article.author }}</span>
-                <div class="pull-left">
+                <!--div class="pull-left">
                     <span class="label label-default">alice</span>
                     <span class="label label-primary">story</span>
                     <span class="label label-success">blog</span>
                     <span class="label label-info">personal</span>
                     <span class="label label-warning">Warning</span>
                     <span class="label label-danger">Danger</span>
-                </div>
+                </div-->
              </div>
             <div class="item">
                 {% autoescape off %} <!-- python way to html_entity_decode, so the HTML tag will work  -->
@@ -25,7 +29,10 @@
                 {% endautoescape %}
             </div>
         </div>
-    {% endfor %}
+            <!--div class="col-md-2"></div-->
+            {% endfor %}
+
+        </div>
     </div>
 
 {% endblock %}
