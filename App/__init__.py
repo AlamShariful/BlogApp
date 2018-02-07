@@ -34,7 +34,7 @@ def is_logged_in(f):
 def home():
     pageName = "Home"
     cur = mysql.connection.cursor()
-    allposts = cur.execute("SELECT * from posts WHERE approved=%s",['yes'])
+    allposts = cur.execute("SELECT * from posts WHERE approved=%s ORDER BY id DESC",['yes'])
     articles = cur.fetchall()
     cur.close()
 
@@ -57,7 +57,7 @@ def dashboard():
     pageName="Dashboard"
     if session['username']=='admin':
         cur = mysql.connection.cursor()
-        allposts = cur.execute("SELECT * from posts")
+        allposts = cur.execute("SELECT * from posts ORDER BY id DESC")
         articles = cur.fetchall()
         #cur.close()
 
@@ -68,7 +68,7 @@ def dashboard():
             return render_template('dashboard.html', pageName=pageName, msg=msg)
     else:
         cur = mysql.connection.cursor()
-        allposts = cur.execute("SELECT * from posts WHERE user_id=%s",[session['userid']])
+        allposts = cur.execute("SELECT * from posts WHERE user_id=%s ORDER BY id DESC",[session['userid']])
         articles = cur.fetchall()
         #cur.close()
 
@@ -83,6 +83,15 @@ def dashboard():
 @is_logged_in
 def edit(id):
     pageName="Edit Post"
+
+    # check if the user is the owner of this post
+    cur = mysql.connection.cursor()
+    postuserid= cur.execute("SELECT posts.user_id from posts where id=%s",[id])
+    if session['userid']!= postuserid:
+        flash('You are Not authorised to edit this Post', 'danger')
+        return redirect(url_for('dashboard'))
+
+    # For regular user post edit
     if request.method=="POST":
         title = request.form['title']
         postbody = request.form['postbody']
@@ -104,7 +113,7 @@ def edit(id):
         flash('Post Submit for approval', 'success')
         return redirect(url_for('dashboard'))
 
-    cur = mysql.connection.cursor()
+    #cur = mysql.connection.cursor()
     editposts = cur.execute("SELECT * from posts WHERE id=%s", [id])
     data = cur.fetchone()
     #bodydata=data['body']
@@ -121,6 +130,12 @@ def edit(id):
 @is_logged_in
 def delete(id):
     cur = mysql.connection.cursor()
+    # check if the user is the owner of this post
+    cur = mysql.connection.cursor()
+    postuserid = cur.execute("SELECT posts.user_id from posts where id=%s", [id])
+    if session['userid'] != postuserid:
+        flash('You are Not authorised to delete this Post', 'danger')
+        return redirect(url_for('dashboard'))
     # Get article
     result = cur.execute("DELETE FROM posts WHERE id = %s", [id])
     mysql.connection.commit()
@@ -137,6 +152,11 @@ def delete(id):
 @is_logged_in
 def postdisapprove(id):
     cur = mysql.connection.cursor()
+
+    # check if the user is the Admin
+    if session['username'] != 'admin':
+        flash('You are Not authorised to Disapproved Post', 'danger')
+        return redirect(url_for('dashboard'))
     # Get article
     result = cur.execute("UPDATE posts SET approved=%s WHERE id = %s", ('waiting', id))
     mysql.connection.commit()
@@ -154,6 +174,11 @@ def postdisapprove(id):
 @is_logged_in
 def postapprove(id):
     cur = mysql.connection.cursor()
+    # check if the user is the Admin
+    if session['username'] != 'admin':
+        flash('You are Not authorised to Approve Post', 'danger')
+        return redirect(url_for('dashboard'))
+
     # Get article
     result = cur.execute("UPDATE posts SET approved=%s WHERE id = %s",('yes',id))
     mysql.connection.commit()
